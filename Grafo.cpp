@@ -127,7 +127,24 @@ public:
         }
         return matriceAdiacenza[indiceSorgente][indiceDestinazione] != INF;
     }
-    
+
+
+int arcopesomin(const T& nodo) const{
+	int i=trovai(nodo);
+	if(indice==-1){
+		cout<<"Non esiste";
+	}
+	int pesomin=inf;
+	for(int i=0; i<numnodi; ++1){
+	if(esistenodo[i] && matrice[indice][i]!=inf){
+		if matrice[indice][i]<pesomin){
+			pesomin=matrice[indice][i];
+		}
+	}
+	return pesomin;
+}
+
+
 private:
     // Trova l'indice di un nodo
     int trovaIndice(const T& nodo) const {
